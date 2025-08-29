@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Unlocking Unstructured Data with GenAI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white-50 font-sans">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+  <div class="h-6"></div> <!-- White space after navbar -->
+
+  <!-- Hero Banner -->
+  <div class="relative max-w-5xl mx-auto">
+    <img src="assets/images/image14a.png" alt="Banner" class="w-full h-45 object-cover rounded-sm">
+  </div>
+
+  <!-- Title + Register (only once, top center) -->
+  <div class="max-w-5xl mx-auto mt-6 p-6 md:p-10 text-center">
+    <h1 class="text-2xl md:text-3xl font-semibold leading-snug">
+      Unlocking Unstructured Data with GenAI
+    </h1>
+
+    <div class="flex justify-center mt-6">
+      <button id="registerBtn" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 font-bold rounded">
+        REGISTER NOW
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Grid (Content + Speakers) -->
+  <div class="max-w-5xl mx-auto bg-white p-6 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    <!-- Left Section: Content -->
+    <div class="md:col-span-2 text-gray-800 space-y-5">
+      <p>
+        GenAI is revolutionizing how organizations and their customers access, use, and interact with information. With
+        the rapid growth of unstructured data – such as product manuals and knowledge bases – the right information
+        architecture is essential for uncovering, understanding, and leveraging these assets for effective data-driven
+        decision-making.
+      </p>
+
+      <p>
+        Implementing GenAI effectively requires overcoming practical challenges. By establishing the right information
+        architecture, you can address key concerns like:
+      </p>
+
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Data Connectivity:</strong> Bridge gaps between disparate data sources, from on-premise systems like
+          mainframes to ecosystems like SAP and Cloud platforms.</li>
+        <li><strong>Governance and Safety:</strong> Ensure AI implementation aligns with your organization's safety and
+          governance requirements without compromise.</li>
+        <li><strong>Cost Management:</strong> Adopt strategies to manage costs across the information lifecycle.</li>
+      </ul>
+
+      <h2 class="font-semibold mt-6">Key Takeaways:</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Practical approaches to integrate diverse data types and formats for streamlined access and usability.</li>
+        <li>Effective tools and techniques to control hidden costs and simplify processes.</li>
+        <li>Strategies to balance innovation with governance to ensure responsible use of your organization's most
+          valuable asset—data.</li>
+      </ul>
+
+      <p class="font-semibold">
+        Don’t miss this live event on <span class="font-bold">Wednesday, September 10, 11 AM PT / 2 PM ET.</span>
+      </p>
+
+      <p>
+        <span id="registerText" class="text-red-600 font-bold cursor-pointer hover:underline">REGISTER NOW</span>
+        <span> to attend the webinar </span>
+        <span class="font-bold">Unlocking Unstructured Data with GenAI.</span>
+      </p>
+    </div>
+
+    <!-- Right Section: Speakers -->
+    <div class="space-y-12 text-center md:text-left">
+
+      <!-- Speaker 1 -->
+      <div class="pt-2">
+        <span class="text-purple-700 font-bold text-xs block mb-2">SPEAKERS</span>
+        <img src="assets/images/image14b.png" alt="Doug Johnson"
+          class="w-24 h-24 mx-auto md:mx-0 mb-3">
+        <p class="font-semibold">Doug Johnson</p>
+        <p class="text-sm text-gray-600">Vice President of Product Management<br>Rocket Software</p>
+      </div>
+
+      <!-- Speaker 2 -->
+      <div class="pt-2">
+        <img src="assets/images/image14c.png" alt="Greg Wilson"
+          class="w-24 h-24 mx-auto md:mx-0 mb-3">
+        <p class="font-semibold">Greg Wilson</p>
+        <p class="text-sm text-gray-600">Content Services for the Americas<br>Rocket Software</p>
+      </div>
+
+      <!-- Moderator -->
+      <div class="pt-2">
+        <span class="text-purple-700 font-bold text-xs block mb-2">MODERATOR</span>
+        <img src="assets/images/image14d.png" alt="Stephen Faig"
+          class="w-24 h-24 mx-auto md:mx-0 mb-3">
+        <p class="font-semibold">Stephen Faig</p>
+        <p class="text-sm text-gray-600">Research Director<br>Unisphere Research and DBTA</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer" class="mt-10"></div>
+
+  <!-- JS -->
+  <script>
+    // Load navbar and footer
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+
+    // Register actions
+    function goRegister() {
+      window.open('register.html', '_blank');
+    }
+
+    document.getElementById('registerBtn').addEventListener('click', goRegister);
+    document.getElementById('registerText').addEventListener('click', goRegister);
+  </script>
+
+</body>
+</html>
